@@ -1,10 +1,15 @@
 import './App.css';
+import Header from './components/Header';
+import Repositories from './components/Repositories';
 
 function App() {
+ 
+  
   return (
-    <div className="App">
-     <h1>Github Repos</h1>
-     
+    <div className="container">
+      <Header/>
+      <Repositories/>
+      
     </div>
   );
 }
