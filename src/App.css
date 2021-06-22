@@ -38,10 +38,7 @@
   background-color: rgb(251, 251, 251);
 }
 
-.card:hover{
-  background-color: blueviolet;
-  color: #fff; ;
-}
+
 
 
 .box-shadow{
@@ -64,6 +61,21 @@ a{
   font-size: 0.5rem;
   text-align: justify;
   margin: 2px;
+  color: grey;
+}
+.card:hover{
+  background-color: rgb(149, 87, 207);
+  transition-delay: 0.2s;
+  
+}
+.card:hover a{
+  color: #fff; 
+  transition-delay: 0.3s;
+}
+
+.card:hover .item-proglang{
+  color: #fff; 
+  transition-delay: ease-in 0.5s;
 }
 
 @media only screen and (max-width: 800px) {

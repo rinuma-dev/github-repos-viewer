@@ -34,6 +34,7 @@ const Repositories = () => {
               <div key={item.id} className="card box-shadow">
                 <a className="item-title"href={item.html_url}>{item.name}</a> 
                 <p className= "item-proglang">{item.language}</p>
+                <p className= "item-proglang">{item.created_at}toDateString();</p>
               </div>
             ))}
           </div>
