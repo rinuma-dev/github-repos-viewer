@@ -31,9 +31,9 @@ const Repositories = () => {
         return (
           <div className="results">
             {items.map(item => (
-              <div key={item.id} className="card">
-                <a href={item.html_url}>{item.name}</a> 
-                <p>{item.language}</p>
+              <div key={item.id} className="card box-shadow">
+                <a className="item-title"href={item.html_url}>{item.name}</a> 
+                <p className= "item-proglang">{item.language}</p>
               </div>
             ))}
           </div>
