@@ -1,14 +1,14 @@
 
-### react-repos-viewer
+## react-repos-viewer
 
 A simple web app to show all repositories from a user, created with react.js using github API.
 
-### LIVE DEMO
+## LIVE DEMO
 
-[https://github-repos-viewer-gfez39tek-rinuma-dev.vercel.app/](Live Demo)
+[Live Demo] (https://github-repos-viewer.vercel.app/)
 
 
-### Project Setup
+## Project Setup
 
 To change user, you can change value from variable USERNAME on src/utils/constants.js 
 
