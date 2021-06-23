@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import BASE_URL from '../utils/constants';
+import Repository from './Repository';
 
 const Repositories = () => {
     const [error, setError] = useState(null);
@@ -9,7 +10,7 @@ const Repositories = () => {
 
     useEffect(() => {
         fetch(BASE_URL)
-          .then(res => res.json())
+          .then(response => response.json())
           .then(
             (result) => {
               setIsLoaded(true);
@@ -29,17 +30,22 @@ const Repositories = () => {
         return <div>Loading...</div>;
       } else {
         return (
-          <div className="results">
-            {items.map(item => (
-              <div key={item.id} className="card box-shadow">
-                <a className="item-title"href={item.html_url}>{item.name}</a> 
-                <p className= "item-proglang">{item.language}</p>
-                <p className= "item-proglang">{item.created_at}toDateString();</p>
-              </div>
-            ))}
-          </div>
-        );
-      }
+            <>
+          {items.map((item)=>(
+           <Repository key = {item.id} item = {item}/>))}
+           </>
+        )
+        
     }
 
+        //   <div className="results">
+              
+        //     {items.map(item => (
+            
+        //     ))}
+        //   </div>
+    //     );
+    //   }
+    // }
+}
 export default Repositories

@@ -17,7 +17,6 @@
 }
 
 .results{
-  
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -65,12 +64,13 @@ a{
 }
 .card:hover{
   background-color: rgb(149, 87, 207);
-  transition-delay: 0.2s;
   
 }
 .card:hover a{
   color: #fff; 
-  transition-delay: 0.3s;
+  transition-delay: ease-in 0.5s;
+  
+ 
 }
 
 .card:hover .item-proglang{
