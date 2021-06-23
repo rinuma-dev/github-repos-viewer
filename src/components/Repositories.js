@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import BASE_URL from '../utils/constants';
+import{ BASE_URL,USERNAME} from '../utils/constants';
 import Repository from './Repository';
 
 const Repositories = () => {
@@ -9,7 +9,7 @@ const Repositories = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch(BASE_URL)
+        fetch(`${BASE_URL}${USERNAME}/repos`)
           .then(response => response.json())
           .then(
             (result) => {
@@ -30,22 +30,13 @@ const Repositories = () => {
         return <div>Loading...</div>;
       } else {
         return (
-            <>
+            <div className="results">
           {items.map((item)=>(
            <Repository key = {item.id} item = {item}/>))}
-           </>
+           </div>
         )
         
     }
 
-        //   <div className="results">
-              
-        //     {items.map(item => (
-            
-        //     ))}
-        //   </div>
-    //     );
-    //   }
-    // }
 }
 export default Repositories

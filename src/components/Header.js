@@ -1,7 +1,9 @@
+import { USERNAME } from "../utils/constants"
+
 const Header = () => {
     return (
         <header>
-             <h1>Github Repos</h1>
+             <h1>{USERNAME} Github Repos</h1>
         </header>
     )
 }

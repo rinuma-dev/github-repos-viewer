@@ -1,3 +1,3 @@
-const BASE_URL = "https://api.github.com/users/paulmillr/repos"
+export const USERNAME ='paulmillr';
+export const BASE_URL = "https://api.github.com/users/";
 
-export default BASE_URL;
